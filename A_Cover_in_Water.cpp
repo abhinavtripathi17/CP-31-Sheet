@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int t;
+    cin >> t;
+
+    while(t-- > 0){
+        int n;
+        cin >> n;
+        string s;
+        cin>>s;
+        int cnt = 0;
+        bool isContinous_three = false;
+        for(int i = 0 ; i < n ; i++){
+            if(s[i] == '#') continue;
+
+            else if(s[i] == '.' && i+1 < n && s[i+1] == '.' && i+2 < n && s[i+2] == '.'){
+                isContinous_three = true;
+                break;
+            }
+            else{
+                if(s[i] == '.') cnt++;
+            }
+        }
+        if(isContinous_three){
+            cout<<"2"<<endl;
+        }
+        else{
+            cout<<cnt<<endl;
+        }
+
+    }
+    return 0;
+}
