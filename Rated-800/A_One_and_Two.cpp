@@ -30,6 +30,7 @@ int main(){
             if(v[i] == 2){
                 new_cnt++;
             }
+
             if(new_cnt == need){
                 idx = i+1;
                 break;
@@ -39,3 +40,4 @@ int main(){
 
     }
 }
+
